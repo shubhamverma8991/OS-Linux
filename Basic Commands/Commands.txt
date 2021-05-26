@@ -1,0 +1,18 @@
+// Basic Commands
+
+Change Directory ---- cd   //from these command it goes to default directory
+                      cd /home/shubham  //change the directory to the required area
+
+Create Directory ----  mkdir Directory_name
+
+Creating Empty Files ---  touch filename
+                          nano filename      //it creates files and also opens nano editor
+                          gedit filenmae     //creates files and opens gui base editor
+                          
+Creating Multiple files on one go ....   touch filename{1..6}.extension   //extension if required
+
+Move file -----   mv filename where_to_copy  //give full extension of the folder where to copy
+Rename File----   mv oldname newnname  // u have to be in that directory to rename                                     
+
+Copy files
+                                        
