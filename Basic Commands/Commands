@@ -1,7 +1,7 @@
 // Basic Commands
 
-Change Directory ---- cd   //from these command it goes to default directory
-                      cd /home/shubham  //change the directory to the required area
+Change Directory ---- cd                    //from these command it goes to default directory
+                      cd /home/shubham      //change the directory to the required area
 
 Create Directory ----  mkdir Directory_name
 
