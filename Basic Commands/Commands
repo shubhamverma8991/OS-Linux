@@ -1,24 +1,31 @@
 // Basic Commands
-
+-----------------------------
 Change Directory ---- cd                    //from these command it goes to default directory
                       cd /home/shubham      //change the directory to the required area
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 Create Directory ----  mkdir Directory_name
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+Listing---- ls    ( -l long listing , -a hidden files , -s sorting by size but in reversed) , -h size in human readable format
+                ls    //listing by name
+                ls -l  //long listing
+                ls -la // hidden file
+                ls -las // sorting by size but reverse
+                ls -lash // size in human readable format
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 Creating Empty Files ---  touch filename
                           nano filename      //it creates files and also opens nano editor
                           gedit filenmae     //creates files and opens gui base editor
                           
 Creating Multiple files on one go ....   touch filename{1..6}.extension   //extension if required
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------
 Move file -----   mv filename where_to_copy  //give full extension of the folder where to copy
 Rename File----   mv oldname newnname  // u have to be in that directory to rename                                     
 
 Copy files
                                         
 XARGS ---- xargs options command
-
-Find Command
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Find Command---- find
                             find location -name filename    // sudo is required sometimes
                                  " . "(repepsent current working directory)
                                 /home/....  (directory)
@@ -27,3 +34,58 @@ Find Command
                                            -iname (no case sensitive)
                
                             find . -per 764   (find by permission) // no file name required
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Word Count --- wc      ( -l lines , -m charcter ,  
+                            we use word count with combination like list command , Concatenate Command (cat) etc.
+                            for eg.
+                            ls -l | wc -l           //( -l line count ) inside directories
+                            cat filename | wc -l    //word count inside any file
+ --------------------------------------------------------------------------------------------------------------------------------------------------------
+Grep Command --- grep
+                      To find a particular file or directory in Whole Stack
+                      ls -l | grep filename
+                      ls -l | grep ^-        ( only files)
+                      ls -l | grep ^d        (only directories)
+                      ls -l | grep ^- | wc -l   (count total number of files)
+                      ls -l | grep ^d | wc -l   (count total number of Directories)
+                      ls -l | grep file*         (grep all files associated with file )
+--------------------------------------------------------------------------------------------------------------------------------------------------------                      
+Cur Command --- cut  (divide or say seperate data)
+                      
+                      cut -d ":" -f 1 filename      //use double quote to avoid error
+                        delimiter i.e : , f-file , 1-colum no
+                      cut -d ":" -f 1,3 filename   //column 1 and 3
+                      cut -d ":" -f 1-3 filename   //column 1 to 3
+                      
+                      cat filename | cut -d ":" -f 1     //using cut in the file
+----------------------------------------------------------------------------------------------------------------------------------------------------------                      
+Sort --- sort         ( -k  column , -n by number , -o store sorted file
+                      sort filename            //sort with 1st column
+                      sort filename -o newfilename  // sorted file into new filename
+                      sort filename >> newfilename
+                      sort -k 1 filenmae       //sort by required column
+                      sort -n -k 2 filename    // -n for number sorting
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+sed                 (-i to save,a append (after insert) , i inser(before) , c replace , d delete
+                      
+                      sed '/Sysyadmin/a \*********************' filename
+                           'Pattern ,a append'
+                      sed '4 a \***************' filename      // aftr 4th line
+                            after 4th line
+                      sed '4 i \***************' filename     //before 4th line
+                      
+                      sed -i '4 a\************' filename      //save changes to original
+                      
+                      sed -i '4 c\***********' filename       //replace 4th line
+                      
+                      sed '4 d\' filename             // delete 4th line
+  
+Translate tr
+                      tr [:lower:] [:upper:]       //lower to upper
+                      tr [:upper:] [:lower:]       //upper to lower
+                                                                        
+AWk   ---awk     (column iteration)
+                      awk '{print}' filename
+                      awk '{print $1}" filename   //print 1st column
+                      awk '{print $1" "$3" "$5}" filename // multiple output and space
+                      $ awk '/pattern/ {print}' filename   //search by pattern
