@@ -79,13 +79,15 @@ sed                 (-i to save,a append (after insert) , i inser(before) , c re
                       sed -i '4 c\***********' filename       //replace 4th line
                       
                       sed '4 d\' filename             // delete 4th line
-  
+ --------------------------------------------------------------------------------------------------------------------------------------------------- 
 Translate tr
                       tr [:lower:] [:upper:]       //lower to upper
                       tr [:upper:] [:lower:]       //upper to lower
-                                                                        
+------------------------------------------------------------------------------------------------------------------------------------------------------                                                                        
 AWk   ---awk     (column iteration)
                       awk '{print}' filename
                       awk '{print $1}" filename   //print 1st column
                       awk '{print $1" "$3" "$5}" filename // multiple output and space
                       $ awk '/pattern/ {print}' filename   //search by pattern
+                      
+-----------------------------------------------------------------------------------------------------------------------------------------------------
