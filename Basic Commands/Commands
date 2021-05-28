@@ -63,14 +63,14 @@ Cur Command --- cut  (divide or say seperate data)
                       
                       cat filename | cut -d ":" -f 1     //using cut in the file
 ----------------------------------------------------------------------------------------------------------------------------------------------------------                      
-Sort --- sort         ( -k  column , -n by number , -o store sorted file
+Sort --- sort         ( -k  column , -n by number , -o store file
                       sort filename            //sort with 1st column
                       sort filename -o newfilename  // sorted file into new filename
                       sort filename >> newfilename
                       sort -k 1 filenmae       //sort by required column
                       sort -n -k 2 filename    // -n for number sorting
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
-sed                 (-i to save,a append (after insert) , i inser(before) , c replace , d delete
+Stream editor ---sed      (-i to save,a append (after insert) , i inser(before) , c replace , d delete
                       
                       sed '/Sysyadmin/a \*********************' filename
                            'Pattern ,a append'
