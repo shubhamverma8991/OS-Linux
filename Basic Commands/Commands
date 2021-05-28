@@ -16,3 +16,14 @@ Rename File----   mv oldname newnname  // u have to be in that directory to rena
 
 Copy files
                                         
+XARGS ---- xargs options command
+
+Find Command
+                            find location -name filename    // sudo is required sometimes
+                                 " . "(repepsent current working directory)
+                                /home/....  (directory)
+     
+                            find / -type f -name passwd
+                                           -iname (no case sensitive)
+               
+                            find . -per 764   (find by permission) // no file name required
