@@ -95,3 +95,8 @@ AWk   ---awk     (column iteration)
                       $ awk '/pattern/ {print}' filename   //search by pattern
                       
 -----------------------------------------------------------------------------------------------------------------------------------------------------
+Test Operator
+                  if [-r filename ]   //readable or not
+                  if [-e filename ]   // executable or not
+                  if [-w filename ]   // writable or not	
+                  if [-f filename ]   // file or not
