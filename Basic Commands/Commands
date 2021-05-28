@@ -21,12 +21,14 @@ Creating Empty Files ---  touch filename
                                                 to exit         :q!
                           
 Creating Multiple files on one go ....   touch filename{1..6}.extension   //extension if required
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Cat --- to see files    cat filename 
 --------------------------------------------------------------------------------------------------------------------------------------------------------
 Move file -----   mv filename where_to_copy  //give full extension of the folder where to copy
 Rename File----   mv oldname newnname  // u have to be in that directory to rename                                     
-
-Copy files
-                                        
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+Copy files ----- cp filename where_to_copy  //give full extension of the folder where to copy
+---------------------------------------------------------------------------------------------------------------------------------------------------------                                        
 XARGS ---- xargs options command
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 Find Command---- find
@@ -100,3 +102,4 @@ Test Operator
                   if [-e filename ]   // executable or not
                   if [-w filename ]   // writable or not	
                   if [-f filename ]   // file or not
+-------------------------------------------------------------------------------------------------------------------------------------------------------
