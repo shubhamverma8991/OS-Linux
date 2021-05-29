@@ -79,14 +79,21 @@ Grep Command --- grep
                       ls -l | grep ^d | wc -l   (count total number of Directories)
                       ls -l | grep file*         (grep all files associated with file )
 --------------------------------------------------------------------------------------------------------------------------------------------------------                      
-Cur Command --- cut  (divide or say seperate data)
+Cut Command --- cut  (divide or say seperate data)
                       
                       cut -d ":" -f 1 filename      //use double quote to avoid error
                         delimiter i.e : , f-file , 1-colum no
                       cut -d ":" -f 1,3 filename   //column 1 and 3
                       cut -d ":" -f 1-3 filename   //column 1 to 3
-                      
+    
                       cat filename | cut -d ":" -f 1     //using cut in the file
+                      
+                      cut -c 1    // cut by chracter 1st
+                      cut -c 1-5  // cut from 1st to 5th Character
+                      
+                      cut -f fieldnumber  // cut by field which have fixed space
+                      
+                      
 ----------------------------------------------------------------------------------------------------------------------------------------------------------                      
 Sort --- sort         ( -k  column , -n by number , -o store file
                       sort filename            //sort with 1st column
@@ -112,6 +119,11 @@ Stream editor ---sed      (-i to save,a append (after insert) , i inser(before) 
 Translate tr
                       tr [:lower:] [:upper:]       //lower to upper
                       tr [:upper:] [:lower:]       //upper to lower
+                      
+                      tr -d "a-z"  //delete all the Lower Character
+                      tr -d "A-Z"  //delete all the Upper Character
+                      
+                      tr -s character  // replace the repeated character 
 ------------------------------------------------------------------------------------------------------------------------------------------------------                                                                        
 AWk   ---awk     (column iteration)
                       awk '{print}' filename
