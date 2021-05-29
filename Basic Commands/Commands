@@ -28,7 +28,30 @@ Move file -----   mv filename where_to_copy  //give full extension of the folder
 Rename File----   mv oldname newnname  // u have to be in that directory to rename                                     
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 Copy files ----- cp filename where_to_copy  //give full extension of the folder where to copy
----------------------------------------------------------------------------------------------------------------------------------------------------------                                        
+---------------------------------------------------------------------------------------------------------------------------------------------------------               
+Delete files ------ rm      ( -r recursive delete)
+			rm filename  //delete a single file
+			rmdir directoryname  // delete directory name
+			rm -r directory name  // recursive delete file and the directory 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Super user / root permission ----- su       ( -n for numeric value , 3 no of rows u want to see )
+					1 - goto root directory --- su root / su -
+					2 - cat /etc/sudoers  ----- sudoers files to give sudo permissions to specific user
+					    tail /etc/sudoers  			head /etc/sudoers
+					    tail -n 3/etc/sudoers		head -n 3/etc/sudoers
+					3 - then we have to do changes in the sudoers file
+					    go to the last line and add
+					    username	ALL=(ALL)	ALL
+					4. u have given user a sudo permission
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Add & Delete User  ------  useradd  ---  userdel
+				sudo useradd username  //add user //sudo is required when not in root user
+				
+				added user doesnot have password , we have to add the password
+			      ---passwd username
+Delete -------------------userdel
+				sudo userdel usernam    //
+
 XARGS ---- xargs options command
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 Find Command---- find
