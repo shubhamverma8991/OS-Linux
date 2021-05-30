@@ -95,12 +95,13 @@ Cut Command --- cut  (divide or say seperate data)
                       
                       
 ----------------------------------------------------------------------------------------------------------------------------------------------------------                      
-Sort --- sort         ( -k  column , -n by number , -o store file
+Sort --- sort         ( -k  specify the keys on the basis of which the sorting has to be done , -n by number , -o store file , -t delimiter
                       sort filename            //sort with 1st column
                       sort filename -o newfilename  // sorted file into new filename
                       sort filename >> newfilename
                       sort -k 1 filenmae       //sort by required column
                       sort -n -k 2 filename    // -n for number sorting
+		      sort -k2 -nrt '|'       // sort by the 2nd column in descending order and there is a delimiter i.e pipe
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 Stream editor ---sed      (-i to save,a append (after insert) , i inser(before) , c replace , d delete
                       
