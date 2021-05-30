@@ -146,10 +146,10 @@ Uniq --- Command line utility that reports filter out the repeated line in the f
 			Uniq -c | cut -c 7-
 			Uniq -c -I | cut -c 7-      
 
-Paste —--- it is used to join files horizontally
+Paste --- it is used to join files horizontally
 (-s sequential merging -d delimiter
 		
 		Paste -c   // tab is by default
 		Paste - - - // 3 into one line by tab spacing
-		Paste -d “;” -s
+		Paste -d ";" -s
 
