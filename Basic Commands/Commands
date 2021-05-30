@@ -70,7 +70,7 @@ Word Count --- wc      ( -l lines , -m charcter ,
                             ls -l | wc -l           //( -l line count ) inside directories
                             cat filename | wc -l    //word count inside any file
  --------------------------------------------------------------------------------------------------------------------------------------------------------
-Grep Command --- grep
+Grep Command --- grep   (-w word search, -i case insensitive search, -v invert pattern 	search, \| or
                       To find a particular file or directory in Whole Stack
                       ls -l | grep filename
                       ls -l | grep ^-        ( only files)
@@ -78,6 +78,13 @@ Grep Command --- grep
                       ls -l | grep ^- | wc -l   (count total number of files)
                       ls -l | grep ^d | wc -l   (count total number of Directories)
                       ls -l | grep file*         (grep all files associated with file )
+		      grep -w
+		      grep -iw
+		      grep -iv
+		      grep -iw "the\|that\|those\|those" //  ' \| ' -- or
+
+		//    grep '\([0-9]\) *\1'
+		//    Takes a digit ([0-9]), remembers it (\...\), looks for zero or more spaces (*) followed by a repeat of the stored digit (\1).
 --------------------------------------------------------------------------------------------------------------------------------------------------------                      
 Cut Command --- cut  (divide or say seperate data)
                       
@@ -103,7 +110,9 @@ Sort --- sort         ( -k  specify the keys on the basis of which the sorting h
                       sort -n -k 2 filename    // -n for number sorting
 		      sort -k2 -nrt '|'       // sort by the 2nd column in descending order and there is a delimiter i.e pipe
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
-Stream editor ---sed      (-i to save,a append (after insert) , i inser(before) , c replace , d delete
+Stream editor ---sed  use for file handling
+			(-i to save,a append (after insert) , i inser(before) , c replace , d delete , ( /1 /2 first occurance , second occurance ), &=pattern check)
+			r =  r is used to read a file and append it at the current point. 
                       
                       sed '/Sysyadmin/a \*********************' filename
                            'Pattern ,a append'
@@ -116,6 +125,9 @@ Stream editor ---sed      (-i to save,a append (after insert) , i inser(before) 
                       sed -i '4 c\***********' filename       //replace 4th line
                       
                       sed '4 d\' filename             // delete 4th line
+
+		      sed 's/the /this /1'   //change this to that in 1st occurance
+		      sed 's/thy /your /gi'  // change all thy to your by /g     from 3rd to all /3g
  --------------------------------------------------------------------------------------------------------------------------------------------------- 
 Translate tr
                       tr [:lower:] [:upper:]       //lower to upper
@@ -126,7 +138,7 @@ Translate tr
                       
                       tr -s character  // replace the repeated character 
 ------------------------------------------------------------------------------------------------------------------------------------------------------                                                                        
-AWk   ---awk     (column iteration)
+AWk   ---awk     (column iteration)  (automatic data conversion)  (
                       awk '{print}' filename
                       awk '{print $1}" filename   //print 1st column
                       awk '{print $1" "$3" "$5}" filename // multiple output and space
