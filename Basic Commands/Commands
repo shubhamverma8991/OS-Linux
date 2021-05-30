@@ -138,4 +138,18 @@ Test Operator
                   if [-e filename ]   // executable or not
                   if [-w filename ]   // writable or not	
                   if [-f filename ]   // file or not
--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Uniq --- Command line utility that reports filter out the repeated line in the file
+( c = tells how many lines was repeated , I = ignore care , u= unique )
+			uniq    // to filter out the repeated line
+			uniq -c //It tells how many times a line was repeated 					by displaying a number as a prefix with the 						line.
+			Uniq -c | cut -c 7-
+			Uniq -c -I | cut -c 7-      
+
+Paste —--- it is used to join files horizontally
+(-s sequential merging -d delimiter
+		
+		Paste -c   // tab is by default
+		Paste - - - // 3 into one line by tab spacing
+		Paste -d “;” -s
+
